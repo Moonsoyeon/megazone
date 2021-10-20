@@ -1,0 +1,1087 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>MEGAZONE</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="download/jquery.mobile-1.4.5.min.css" />
+	<script src="download/jquery-1.11.1.min.js"></script>
+	<script src="download/jquery.mobile-1.4.5.min.js"></script>
+
+	<link rel="stylesheet" href="download/owl.carousel.min.css">
+	<link rel="stylesheet" href="download/owl.theme.default.min.css">
+	<script src="download/owl.carousel.js"></script>
+	<script src="cordova.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#nav ul.sub").hide();
+			$("#nav ul.menu li").click(function () {
+				$("ul", this).slideToggle("fast");
+			});
+		});
+	</script>
+
+<script>
+	$(document).ready(function() {
+		 var owl = $('.owl-carousel');
+		 owl.owlCarousel({
+				items: 1,
+				loop: true,
+				margin: 10,
+				autoplay: true,
+				autoplayTimeout: 2100,
+				autoplayHoverPause: true
+		 });
+		 $('.play').on('click', function() {
+				owl.trigger('play.owl.autoplay', [2100])
+		 })
+		 $('.stop').on('click', function() {
+				owl.trigger('stop.owl.autoplay')
+		 })
+	})
+</script>
+
+	
+	<style>
+		#nav {
+			font-family: 'arial';
+		}
+
+		#nav ul {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		#nav ul.menu li {
+			position: relative;
+			float: left;
+			width: 100%;
+			list-style-type: none;
+			font-size: 20px;
+		}
+
+		#nav ul.menu li a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: 30px;
+			text-indent: 20px;
+			color: #000;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		#nav ul.menu li a:hover {
+			background: #eee;
+		}
+
+		#nav ul.menu li .sub a {
+			position: relative;
+			float: left;
+			display: block;
+			width: 100%;
+			z-index: 999;
+			background: #ccc;
+		}
+
+		#nav ul.menu li .sub a:hover {
+			background: #444;
+			color: #fff;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		.picture {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.picture li {
+			float: left;
+			width: 50%;
+		}
+
+		.picture li a {
+			display: block;
+			margin: 5px;
+			border: 1px
+		}
+
+		.picture li img {
+			display: block;
+			width: 50%;
+			height: auto;
+		}
+
+		.picture li img:hover {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		footer {
+			line-height: 25px;
+		}
+
+		.partner-list>ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.partner-list>ul>li {
+			flex: 0 1 calc(100% / 3 - 40px);
+			margin: 10px 0;
+		}
+
+		.partner-list>ul>li img {
+			margin: auto;
+			width: 100%;
+		}
+
+		.partner-list>ul>li .partner-img a {
+			display: block;
+			text-align: center;
+			line-height: 0;
+		}
+
+		.partner-list>ul>li .partner-img p {
+			line-height: 0;
+			margin: 0;
+		}
+
+		.partner-list>ul>li .partner-name {
+			font-size: 18px;
+			padding-bottom: 10px;
+			font-weight: bold;
+			color: #f56060;
+		}
+
+		.partner-list>ul>li .desc {
+			line-height: 1.6;
+			color: black;
+		}
+
+		.partner-list>ul>li .btn-wrap {
+			margin-top: 10px;
+		}
+
+		.partner-list>ul>li .btn-wrap .to-link {
+			color: #779ff0;
+			text-decoration: none;
+			vertical-align: middle;
+		}
+
+		.partner-list>ul>li .btn-wrap .to-link:after {
+			content: '>';
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			margin-left: 5px;
+			background-color: #779ff0;
+			color: #ffffff;
+			text-align: center;
+			padding: 2px;
+			font-size: 8px;
+			line-height: 13px;
+			vertical-align: bottom;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<div data-theme="b">
+		<div data-role="page" id="home">
+			<nav class="navbar navbar-light bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">
+						<img src="img/logo.jpg" alt="" width="190" height="50" class="d-inline-block align-text-top">
+					</a>
+				</div>
+			</nav>
+
+			<div id="nav" style="text-align:right; padding-right: 30px;">
+				<ul class="menu">
+					<li><a href="#">MENU ≡</a>
+						<ul class="sub">
+							<li><a href="#company">COMPANY</a></li>
+							<li><a href="#movie">MOVIE</a></li>
+							<li><a href="#cloud">CLOUD</a></a></li>
+							<li><a href="#news">NEWS</a></a></li>
+							<li><a href="#contact">CONTACT</a></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div data-role="content" style="text-align:center">
+
+				<div class="owl-carousel owl-theme">
+					<div>
+						<img src="img/main1.jpg">
+					</div>
+					<div>
+						<img src="img/main2.jpg">
+					</div>
+					<div>
+						<img src="img/main3.jpg">
+					</div>
+				</div>
+				<br>
+				
+
+				<!--
+				<img src="main1.jpg" class="img-fluid" alt="...">
+				<img src="main2.jpg" class="img-fluid" alt="...">
+				<img src="main3.jpg" class="img-fluid" alt="...">
+				-->
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#company">COMPANY</a></li>
+					<li><a href="#movie">소개 영상</a></li>
+					<li><a href="#cloud">CLOUD</a></li>
+					<li><a href="#news">NEWS</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</div>
+
+			<div data-role="footer" data-position="fixed" data-theme="b">
+				<h1>MEGAZONE</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="company" data-theme="b">
+			<div data-role="header" data-theme="b">
+				<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+				<h1>COMPANY</h1>
+			</div>
+
+			<div data-role="content">
+				<div style="text-align:center">
+					<img src="img/overview.jpg" height="180" width="99.2%">
+				</div>
+				<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>OVERVIEW</h3>
+						<p>
+							&nbsp;
+						</p>
+						<p>
+							<span style="color:#67b7f8;"><span style="font-size:20px;">디지털 매체에 최적화된</span><strong><span
+										style="font-size:24px;"> 고객 커뮤니케이션</span></strong><span
+									style="font-size:24px;">과</span><strong><span style="font-size:24px;"> 인터랙션</span></strong><span
+									style="font-size:24px;">을 제공합니다.</span></span>
+						</p>
+						<p style="font-size: 15px;">
+							1998년부터 축적해온 경험과 인사이트로 새롭게 분화하는 미디어를 가장 먼저 이해하고,&nbsp;&nbsp;고객사의 사업 전략에 최적화된 혁신적이고, 창의적인 사용자 경험을 만들기 위해
+							노력하고 있습니다.&nbsp;<br />
+							<span style="line-height: 1.6em;">철저한 미디어 분석, 고객 분석, 브랜딩을 통해 고객사가 다양한 미디어 채널을 통해 자사의 고객과 관계를 맺고, 의미 있는 사용자
+								경험을 제공하며,&nbsp;브랜드 인지도를 높일 수 있도록 전략적 컨설팅부터 제작 및 운영에 이르는 Full Interactive Service를 제공하고 있습니다.
+								&nbsp;</span>
+						</p>
+						<p>
+							<span style="color:#e05454;"><strong style="line-height: 1.6em;"><span style="font-size:8px;">▶</span> 고도의
+									IT 기술과 &nbsp;경험을 바탕으로 최적화된 서비스</strong></span>
+						</p>
+						<p style="font-size: 15px;">
+							고객의 비즈니스 대한 이해를 바탕으로&nbsp;시스템의 분석/설계부터 구축, 운영, 유지보수, 마케팅까지 통합 서비스를 제공 합니다.<br />
+							<span style="line-height: 1.6em;">최신 IT 기술을 보유한 전문인력을 주축으로 최고의 &nbsp;품질 체계를 유지 하고 있으며,&nbsp;고객의 니즈에 발맞춰 가지
+								않고, 한발 앞서 분석하고 좀더 넓게 보려는 노력을 게을리 하지 않음으로써&nbsp;</span><span style="line-height: 1.6em;">IT 리더의 자긍심으로 수준
+								높은 서비스를 제공하겠습니다.&nbsp;</span><span style="line-height: 1.6em;">평범함을 벗어나기 위해 매일 고민하고, Client와 Client의 고객들
+								모두의 상상을 뛰어넘는 아이디어와 결과물을 만들어가고 있습니다.&nbsp;</span><span style="line-height: 1.6em;">최고의 아이디어와 함께 최고의 기술력과
+								Creative 모두를 추구합니다.&nbsp;</span><span style="line-height: 1.6em;">전문적인 3D모델링 기술과 영상 편집 및 최신 기술인 3D영상
+								제작까지 가능한 전문성을 기반으로 현재 다양한 대내외 프로젝트를 수행하고 있으며,&nbsp;</span><span style="line-height: 1.6em;">온라인, 모바일,
+								스마트 TV와 디지털 사이니지 등 다양한 매체를&nbsp;</span><span style="line-height: 1.6em;">포함하는 무궁무진한 응용환경 도래에 완벽히 대응할 수
+								있는 기반을 구축하고&nbsp;</span><span style="line-height: 1.6em;">실력을 겸비하였습니다.</span>
+						</p>
+						<p style="font-size: 15px;">
+							<span style="color:#e05454;"><span style="font-size:14px;"><strong><span style="font-size:8px;">▶</span>
+										안정적이고 수준 높은 HIGH-END COMMERCE SERVICE</strong></span></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span style="font-size:14px;">&nbsp;내부 R&amp;C 활용을 통해 각종 커머스 서비스부터 컨텐츠, 커뮤니티 등 토탈 웹서비스를 최적화 해 제공하고
+								있습니다.&nbsp;&nbsp;서비스의 전문가 그룹은 차별화 된 운영, 업무 프로세스 고도화 등 10여 년에 걸친 커머스 그룹만의 노하우를 비즈니스 솔루션에 적용시키고
+								있습니다.</span>&nbsp;<span style="line-height: 1.6em; font-size: 14px;">2007년 엔크린포인트몰(encleanmall.com) 및
+								삼성카드 </span><span style="line-height: 1.6em;">소셜커머스 더소셜(social.samsungcard.com) 등&nbsp;</span><span
+								style="line-height: 1.6em;">&nbsp;각종 온라인 쇼핑몰 및 폐쇄몰의 구축/운영을 안정화시킴은 물론, 1998년 메가존의 태동과
+								함께&nbsp;</span><span style="line-height: 1.6em;">&nbsp;시작한 온라인 스포츠 쇼핑채널(www.megazone.co.kr)을 운영하며 스포츠 전문
+								온라인 유통 1위 업체를 고수하고 있습니다.&nbsp;</span><span style="line-height: 1.6em;">나아가 물류, 아웃소싱 등 사업의 다각화 및 발전을 지향하고
+								있으며, 포인트몰 행사진행 및 벤더관리, 상품관리와 정산 등 커머스 분야의 진정한 토탈 서비스를 제공합니다.</span>
+						</p>
+						<p style="font-size: 15px;">
+							<span style="color:#e05454;"><span style="font-size:14px;"><strong><span style="font-size:8px;">▶</span>
+										차별화되고 최적화된 INFRA 매니지먼트 서비스</strong></span></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span style="font-size:14px;">&nbsp; KISA 선정 4년 연속 고객만족도 우수기업에 선정된 호스팅케이알(www.hosting.kr)을 기반으로 &nbsp;도메인
+								등록 대행, 빠르고 안정된 웹호스팅, 프리미엄 매니지드 서버호스팅를 제공합니다.&nbsp;&nbsp;글로벌 고객사와 금융권 고객사를 다수 보유하고 있어 기업을 대상으로 한
+								Enterprise-Hosting 서비스를 제공, 보다 뛰어난 기술력을 바탕으로 호스팅 서비스를 운영합니다.&nbsp;</span><span
+								style="font-size: 14px; line-height: 1.6em;">&nbsp;Red Hat Certified Engineer(레드헷 인증 엔지니어), 리눅스 전문가 인증
+								제도에 하나인 LPCI 자격, 네트워크 CCIE 자격증</span><span style="font-size: 14px; line-height: 1.6em;">&nbsp;MS 자격증인
+								MCSE, MCSA, MCDBA 등 다양한 자격증을 갖춘 엔지니어를 &nbsp;보유한 system 기술지원 팀을 자체 운영하니다.&nbsp;</span><span
+								style="font-size: 14px; line-height: 1.6em;">&nbsp;4개의 IDC를 운영중에 있으며, 클라우드 서비스를 중심으로 글로벌 비지니스를 진행하고
+								있습니다. 국내 최초 아마존과 제휴 계약을 하여 아마존의 클라우드 기술력을 국내에 제공하며,&nbsp;</span><span
+								style="line-height: 1.6em; font-size: 14px;">구글과의 제휴를 통해 구글앱스, 구글 클라우드를 서</span><span
+								style="line-height: 1.6em;">비스 합니다.</span>
+						</p>
+						<p style="font-size: 15px;">
+							<br />
+							<span style="color:#e05454;"><span style="font-size:14px;"><strong><span
+											style="font-size:8px;">▶&nbsp;</span> 안정이고 수준 높은 e-Learning 서비스</strong></span></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span style="font-size:14px;">&nbsp;온라인 교육과정 개발, LMS 구축 및 운영, 교육컨설팅 서비스, 국내대학과의 사업제휴를 통한 온라인 학위과정(학점은행제)
+								등&nbsp;최적화된 온라인 교육 </span>서비스를 제공하고 있습니다. 또한 다양한 고객의 요구 분석 및 체계적인 Consulting을 통해 온오프라인 교육을 포괄하는 Total
+							교육서비스 사업을 지향하고 있습니다.</p>
+					</div>
+					<a href="#header" id="top-link"><span></span></a>
+					</section>
+				</div>
+			</div>
+
+
+			<div data-role="content">
+				<div style="text-align:center">
+					<img src="img/businessarea.jpg" height="180" width="99.2%">
+				</div>
+				<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>BUSINESS AREAS</h3>
+						<div>
+							<div>
+								<p>
+									<span style="font-size:24px;"><span style="color:#e05454;">Interactive
+											Agency</span></span>
+								</p>
+								<p>
+									브랜드 전략 및 포지셔닝<br />
+									브랜드 경험 설계<br />
+									미디어 리서치 및 분석<br />
+									미디어 기획 및 전략<br />
+									매트릭스 정의, 측정, 분석 및 최적화<br />
+									사용자 리서치<br />
+									웹사이트, 뉴미디어 및 소셜네트워크 캠페인 분석 및 맞춤 리포팅<br />
+									소비자 인사이트<br />
+									브랜드 아이덴티티, 메세징<br />
+									컨셉 설계 및 컨텐츠 개발<br />
+									고객 경험 모델링<br />
+									인포메이션 아키텍쳐 (I.A.)<br />
+									유저 인터페이스 설계<br />
+									고객 참여 설계<br />
+									리치 인터넷 어플리케이션<br />
+									웹 서비스<br />
+									데이터베이스 디자인<br />
+									품질 관리 / 유지 보수<br />
+									모바일 어플리케이션 개발<br />
+									기획 및 전략 수립<br />
+									리포팅<br />
+									뉴 미디어 관리<br />
+									멀티 채널, 크로스 플랫폼 전략<br />
+									커뮤니케이션 최적화<br />
+									통합적 경험 설계<br />
+									UX/ GUI
+								</p>
+							</div>
+							<div>
+								<span style="font-size:24px;"><span style="color:#e05454;"><span
+											style="font-family:arial,helvetica,sans-serif;">Online Promotion &amp;
+											Marketing</span></span></span>
+								</p>
+								<p>
+									브랜딩 및 브랜드 목표 설정 캠페인과 플랫폼 통합<br />
+									미디어 플래닝 및 정의<br />
+									오프라인 이벤트 경험<br />
+									애드버게이밍<br />
+									모바일 마케팅<br />
+									소셜 마케팅<br />
+									리치 미디어 및 배너 개발<br />
+									인터넷 캠페인 플랫폼 : 바이럴, 콘테스트, 설문조사, 고객참여 이벤트
+								</p>
+								<p>
+									<span style="font-size:24px;"><span style="font-family:arial,helvetica,sans-serif;"><span
+												style="color:#e05454;">Education</span></span></span>
+								</p>
+								<p>
+									HRD 이러닝 컨설팅(B2B, B2C, HRD, LMS, 인프라)<br />
+									컨텐츠 개발(3D, VR, e-book, 교과서)&nbsp;<br />
+									프로그램 개발<br />
+									교육 솔루션 개발(e-HRD 시스템, 이러닝 시스템,플랫폼)<br />
+									LMS 위탁 운영<br />
+									유지 보수
+								</p>
+							</div>
+							<div>
+								<span style="font-size:24px;"><span style="color:#e05454;"><span
+											style="font-family:arial,helvetica,sans-serif;">Platform Service</span></span></span></p>
+								<p>
+									도메인<br />
+									서버 호스팅, 웹 호스팅, IDC, CDN<br />
+									클라우드 컴퓨팅(Private Cloud, Virtualization)<br />
+									장비 납품 및 유지 보수<br />
+									전자인증, 전자결제,웹방화벽
+								</p>
+								<p>
+									<span style="font-size:24px;"><span style="font-family:arial,helvetica,sans-serif;"><span
+												style="color:#e05454;">Computer Graphics</span></span></span>
+								</p>
+								<p>
+									입체영상 제작 모션 그래픽 디자인<br />
+									3D 컨텐츠 제작<br />
+									영상 제작<br />
+									WEB VR<br />
+									미디어 파사드
+								</p>
+								<p>
+									<span style="font-size:24px;"><span style="font-family:arial,helvetica,sans-serif;"><span
+												style="color:#e05454;">E-commerce</span></span></span>
+								</p>
+								<p>
+									이커머스 컨설팅<br />
+									쇼핑몰 개발, 운영, 유지 보수<br />
+									몰 인 몰 (Mall-in-mall) API<br />
+									벤더 위탁운영, 평가, 관리<br />
+									위탁운영<br />
+									상품 총판운영&nbsp;<br />
+									PB 상품 개발<br />
+									물류 시스템 (3PL Logis)
+								</p>
+
+								<a href="#header" id="top-link"><span></span></a>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div data-role="footer" data-position="fixed" data-theme="b">
+				<h1>MEGAZONE</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="cloud" data-theme="b">
+			<div data-role="header" data-theme="b">
+				<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+				<h1>CLOUD</h1>
+			</div>
+
+			<div data-role="content">
+				<div style="text-align:center">
+					<img src="img/cloudmain.jpg" display="block" ; margin="auto" ; width="100%" ; height="300">
+				</div>
+				<div class="partner-list">
+
+					<li>
+						<div class="card">
+							<div class="partner-img thumb"><a href="https://www.megazone.com/" target="_blank"
+									rel="noopener noreferrer"><br />
+									<div style="text-align: center;"><img
+											src="https://img.mz.co.kr/wp-content/uploads/2020/12/24153356/logo_aws.jpg" alt="aws" /></div>
+									<br />
+								</a>
+								<p> </p>
+								<div class="info pattern"><span class="button-link"> </span></div>
+							</div>
+							<div class="partner-name" style="color: #e05454; font-size: 20px;">AWS (Amazon Web Services)</div>
+							<br>
+							<div class="desc" style="color: black;">메가존은 디지털 영역의 다양한 경험을 쌓아온 클라우드 관리 기업(MSP)이자 한국 최초의 AWS 파트너사로서
+								3,000여개 고객을 보유하고 있으며, 국내
+								클라우드 시장을 선도하는 Asia No1 AWS 프리미어 컨설팅 파트너입니다.</div>
+							<br>
+							<div class="btn-wrap" style="text-align: center;"><a class="to-link" title="새 창"
+									href="https://www.megazone.com/" target="_blank" rel="noopener noreferrer">홈페이지</a></div>
+						</div>
+					</li>
+
+					<li>
+						<div class="card">
+							<div class="partner-img thumb"><a href="https://www.megazone.com/google" target="_blank"
+									rel="noopener noreferrer"><br />
+									<div style="text-align: center;"><img
+											src="https://img.mz.co.kr/wp-content/uploads/2020/12/24153354/logo_googlecloud.jpg"
+											alt="google cloud" /></div><br />
+								</a>
+								<p> </p>
+								<div class="info pattern"><span class="button-link"> </span></div>
+							</div>
+							<div class="partner-name" style="color: #e05454; font-size: 20px;">Google Cloud</div>
+							<br>
+							<div class="desc" style="color: black;">메가존은 한국 최초의 Google 파트너이자 프리미어 파트너입니다. Google Cloud Platform은 컨테이너
+								기반의 애플리케이션 개발에 용이하고,
+								빅데이터를 활용한 데이터 분석과 AI/ML분야에 핵심 역량을 보유하고 있으며, Google Workspace(구.G Suite)는 기업내 협업 환경을 제공합니다.</div>
+							<br>
+							<div class="btn-wrap" style="text-align: center;"><a class="to-link" title="새 창"
+									href="https://www.megazone.com/google" target="_blank" rel="noopener noreferrer">홈페이지</a></div>
+						</div>
+					</li>
+
+					<li>
+						<div class="card">
+							<div class="partner-img thumb"><a style="cursor: default;">
+									<div style="text-align: center;"><img
+											src="https://img.mz.co.kr/wp-content/uploads/2020/12/24153354/logo_microsoftazure.jpg"
+											alt="Microsoft Azure" /></div>
+								</a></div>
+							<div class="partner-name" style="color: #e05454; font-size: 20px;">Microsoft Azure</div>
+							<br>
+							<div class="desc" style="color: black;">메가존은 Microsoft Azure의 파트너이자 클라우드 관리 기업(MSP)으로서 애플리케이션 개발, 데이터 분석 및
+								인공지능(AI), 클라우드
+								마이그레이션, 하이브리드 클라우드 및 인프라, 보안 등의 다양한 솔루션을 고객의 산업군에 맞게 제공합니다.</div>
+							<div class="btn-wrap"></br>
+								<!--<a href="" target="_blank" title="새 창" class="to-link" rel="noopener noreferrer">홈페이지</a>-->
+							</div>
+						</div>
+					</li>
+					</li>
+
+					<li>
+						<div class="card">
+							<div class="partner-img thumb"><a href="https://www.alibabacloud.co.kr/" target="_blank"
+									rel="noopener noreferrer"><br />
+									<div style="text-align: center;"><img
+											src="https://img.mz.co.kr/wp-content/uploads/2020/12/24153355/logo_alibaba.jpg"
+											alt="Alibaba Cloud" /></div>
+								</a>
+								<p> </p>
+								<div class="info pattern"><span class="button-link"> </span></div>
+								<p> </p>
+							</div>
+							<div class="partner-name" style="color: #e05454; font-size: 20px;">Alibaba Cloud</div>
+							<br>
+							<div class="desc" style="color: black;">메가존은 원스톱 클라우드 솔루션으로 한국 기업의 중국&amp;아시아 비즈니스를 지원합니다. 나아가 APAC 1위
+								알리바바 클라우드를 통해 비용 효율적이며,
+								극대화된 성능의 하이브리드 클라우드 시스템 구축이 가능합니다.</div>
+							<br>
+							<div class="btn-wrap" style="text-align: center;"><a class="to-link" title="새 창"
+									href="https://www.alibabacloud.co.kr/" target="_blank" rel="noopener noreferrer">홈페이지</a></div>
+						</div>
+					</li>
+
+
+					<li>
+						<div class="card">
+							<div class="partner-img thumb"><a href="https://www.tencentcloud.co.kr/" target="_blank"
+									rel="noopener noreferrer"><br />
+									<div style="text-align: center;"><img
+											src="https://img.mz.co.kr/wp-content/uploads/2020/12/24153355/logo_tencent.jpg"
+											alt="Tencent Cloud" /></div>
+								</a>
+								<p> </p>
+								<div class="info pattern"><span class="button-link"> </span></div>
+								<p> </p>
+							</div>
+							<div class="partner-name" style="color: #e05454; font-size: 20px;">Tencent Cloud</div>
+							<br>
+							<div class="desc" style="color: black;">메가존은 텐센트 클라우드의 전 세계 27개 리전, 58개 가용 인프라, 1,300여 개 노드를 활용하여 게임 및 음악,
+								비디오, 웹사이트, 교육 등에서
+								강력한 솔루션을 제공합니다.</div>
+							<br>
+							<div class="btn-wrap" style="text-align: center;"><a class="to-link" title="새 창"
+									href="https://www.tencentcloud.co.kr/" target="_blank" rel="noopener noreferrer">홈페이지</a></div>
+						</div>
+					</li>
+
+
+					<li>
+						<div class="card">
+							<div class="partner-img thumb"><a style="cursor: default;">
+									<div style="text-align: center;"><img
+											src="https://img.mz.co.kr/wp-content/uploads/2020/12/24153355/logo_oracle.jpg"
+											alt="Oracle Cloud" /></div><br />
+								</a></div>
+							<div class="partner-name" style="color: #e05454; font-size: 20px;">Oracle Cloud</div>
+							<br>
+							<div class="desc" style="color: black;">메가존은 Oracle를 통해 효율적인 Enterprise Cloud 전환을 지원하며, 기업에 미션 크리티컬한
+								애플리케이션의 클라우드 마이그레이션 서비스와
+								하이브리드/멀티 클라우드를 위한 안정적인 Managed Service를 제공합니다.</div>
+							<div class="btn-wrap">
+								<br>
+								<!--<a href="" target="_blank" title="새 창" class="to-link" rel="noopener noreferrer">홈페이지</a>-->
+							</div>
+						</div>
+					</li>
+
+				</div>
+
+			</div>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+				<h1>MEGAZONE</h1>
+			</div>
+		</div>
+
+		<div data-role="page" id="movie" data-theme="b">
+			<div data-role="header" data-position="fixed" data-theme="b">
+				<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+				<h1>소개 영상</h1>
+			</div>
+
+			<div data-role="content">
+				
+				<iframe width="100%" height="500"
+				  src="https://www.youtube.com/embed/h2iXWf9N8uY" 
+				  title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; 
+									encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+
+			</div>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+				<h1>MEGAZONE</h1>
+			</div>
+		</div>
+
+<div data-role="page" id="contact" data-theme="b">
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+		<h1>CONTACT</h1>
+	</div>
+	<div data-role="content" style="text-align: center;">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12661.643013696359!2d127.02554079050962!3d37.4982292785513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1567124f385%3A0x622d76b6dc0bc6c6!2z66mU6rCA7KG0KOyjvCk!5e0!3m2!1sko!2skr!4v1632970192882!5m2!1sko!2skr"
+			width="99.2%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	</div>
+	<br>
+	<div style="color: #e05454; font-size: 23px;">ADDITIONAL INFO</div>
+	<div style="color: white; font-size: 15px;"><br>MEGAZON B/D, 735-22, Yeoksam-dong, GangNam-gu, Seoul 06235, Korea
+	</div>
+	<div style="color: white; font-size: 15px;">T.+82·(0)2·2109·2500</div>
+	<br>
+	<div style="color: white; font-size: 15px;">2호선 역삼역 3번출구 진출 후 삼성모바일 매장을 기준으로 좌회전 > 직진 후 좌측 패밀리마트 발견 시 우회전 > 1층
+		Cloud cafe 건물로 진입</div>
+	<br>
+	<div style="color: white; font-size: 15px;"><br>메가존(주)<br>사업자등록번호 : 214-86-79342<br>대표자명 : 장지황 대표
+	</div>
+
+	<br>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<h1>MEGAZONE</h1>
+	</div>
+</div>
+
+
+<div data-role="page" id="news" data-theme="b">
+	<div data-role="header" data-theme="b">
+		<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+		<h1>NEWS</h1>
+	</div>
+
+	<div data-role="content">
+		<div style="text-align:center">
+			<img src="img/press.png" height="250" width="99.2%">
+		</div>
+		<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>PRESS</h3>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c%ec%a3%bc-2019-%eb%8c%80%ed%95%9c%eb%af%bc%ea%b5%ad-%ec%a4%91%ec%86%8c%c2%b7%ec%a4%91%ea%b2%ac%ea%b8%b0%ec%97%85-%ed%98%81%ec%8b%a0/">메가존클라우드(주),
+					2019 대한민국 중소·중견기업 혁신대상 수상</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ea%b4%91%ec%a3%bc%ec%a0%84%eb%82%a8-%eb%b2%a4%ec%b2%98%ea%b8%b0%ec%97%85%ec%9d%b8%ec%9d%98-%eb%b0%a4-%ec%84%b1%eb%a3%8c%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac/">‘광주전남
+					벤처기업인의 밤’ 성료…“네트워크 확대”</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ea%b3%bc%ea%b8%b0%ec%a0%95%ed%86%b5%eb%b6%80-%ec%a0%9c14%ed%9a%8c-%eb%8c%80%ed%95%9c%eb%af%bc%ea%b5%ad-%ec%9d%b8%ed%84%b0%eb%84%b7%eb%8c%80%ec%83%81-%ea%b0%9c%ec%b5%9c/">과기정통부,
+					‘제14회 대한민국 인터넷대상’ 개최</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/lg-cns%c2%b7%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%95%a9%ec%9e%91-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c%ea%b7%b8%eb%9e%a8-%eb%82%b4%eb%8b%ac-2%ec%9d%bc-%ec%b6%9c%eb%b2%94/">LG
+					CNS·메가존 합작 ‘클라우드그램’, 내달 2일 출범</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%9d%b4%ec%a3%bc%ec%99%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%eb%8c%80%ed%91%9c-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%a0%84%ed%99%98%ec%9c%a8-10-%ec%9c%84%ea%b8%b0%ec%9d%b4%ec%9e%90-%ea%b8%b0/">이주완
+					메가존 대표 “클라우드 전환율 10%, 위기이자 기회”</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%82%bc%ec%a0%95kpmg-%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%bb%a8%ec%84%a4%ed%8c%85-%ec%82%ac%ec%97%85-mou/">삼정KPMG-메가존클라우드,
+					클라우드 컨설팅 사업 MOU</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%98%ac-%eb%a7%a4%ec%b6%9c-4000%ec%96%b5%ec%9b%90-%eb%84%98%eb%b3%b8%eb%8b%a4/">메가존,
+					올 매출 4000억원 넘본다</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%b3%b4%ec%95%88-%ea%b5%ad%ec%a0%9c%ec%9d%b8%ec%a6%9d-3%ea%b0%9c-%eb%b6%80%eb%ac%b8-%eb%8f%99%ec%8b%9c-%ed%9a%8d%eb%93%9d/">메가존,
+					클라우드 보안 국제인증 3개 부문 동시 획득…국내외 클라우드 보안인증 완비</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%9e%8c%eb%8b%a4256%c2%b7%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%b8%94%eb%a1%9d%ec%b2%b4%ec%9d%b8-%ec%9c%a0%ed%86%b5%eb%a7%9d-%ed%99%95%eb%8c%80-%ed%8c%8c%ed%8a%b8/">람다256·메가존클라우드,
+					블록체인 유통망 확대 파트너십</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/lg-cns-%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%a0%84%ed%99%98-%ec%83%9d%ed%83%9c%ea%b3%84-%ec%84%a0%ec%a0%90-%ec%9c%84%ed%95%9c-%ed%95%a9%ec%9e%91%eb%b2%95%ec%9d%b8/">LG
+					CNS-메가존, 클라우드 전환 생태계 선점 위한 합작법인 설립</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-aws-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%a0%84%eb%ac%b8-%ec%9d%b8%eb%a0%a5-%ec%96%91%ec%84%b1%ea%b5%90%ec%9c%a1%ea%b8%b0/">메가존
+					클라우드, AWS 클라우드 전문 인력 양성…교육기관 설립</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ed%85%8c%ed%81%ac%eb%84%b7%ec%84%9c%eb%b0%8b2019-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%97%98%eb%9d%bc%ec%8a%a4%ed%8b%b1-%ec%8a%a4%ed%83%9d-%ec%bb%a8%ed%85%8c%ec%9d%b4/">[오픈테크넷서밋2019]
+					메가존, “엘라스틱 스택, 컨테이너 모니터링 최적 솔루선”</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%af%b8%eb%9e%98%ed%98%95-%ec%8a%a4%eb%a7%88%ed%8a%b8%ec%8b%9c%ed%8b%b0-%ea%b5%ac%ec%b6%95%ec%a0%95%eb%b6%80%ea%b0%80-%eb%b0%80%ea%b3%a0-%ea%b8%b0%ec%97%85%ec%9d%b4-%ec%9d%b4%eb%81%88/">미래형
+					스마트시티 구축…정부가 밀고 기업이 이끈다</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-ai%ed%99%9c%ec%9a%a9%ed%95%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%b3%b4%ec%95%88-%ea%b0%95%ed%99%94/">메가존
+					클라우드, AI활용해 클라우드 보안 강화</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4%c2%b7%ec%95%84%eb%a7%88%eb%85%b8%ec%bd%94%eb%a6%ac%ec%95%84%c2%b7%ed%8b%b0%ec%95%a4%ec%95%8c%eb%b0%94%ec%9d%b4%ec%98%a4%ed%8c%b9-%eb%a6%ac%eb%94%a9%ea%b8%b0/">메가존·아마노코리아·티앤알바이오팹,
+					‘리딩기업대상 3년연속상’ 수상</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/ai%c2%b7%eb%a1%9c%eb%b4%87-%ec%84%9c%eb%b0%8b-2019%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ed%81%90%eb%b8%8cai%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4/">[AI·로봇
+					서밋 2019]메가존클라우드 ‘큐브AI’…비즈니스 통찰력 제공</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b8%b0%eb%b0%98-erp%eb%a1%9c-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4%eb%a5%bc-%ec%84%b1%ea%b3%b5%ec%8b%9c%ed%82%a4%eb%a0%a4%eb%a9%b4/">클라우드
+					기반 ERP로 비즈니스를 성공시키려면?</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/ai%ec%97%94%ed%84%b0%ed%94%84%eb%9d%bc%ec%9d%b4%ec%a6%88-2019%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-aws-%ea%b8%b0%eb%b0%98-r-%ec%82%ac%ec%9a%a9%eb%b2%95-%ea%b3%b5%ec%9c%a0/">[AI엔터프라이즈
+					2019]메가존클라우드, AWS 기반 R 사용법 공유</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ea%b8%b0%ea%b3%a0-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%ec%95%a0%ed%94%8c%eb%a6%ac%ec%bc%80%ec%9d%b4%ec%85%98%ea%b3%bc-%ed%95%98%ec%9d%b4%eb%b8%8c%eb%a6%ac%eb%93%9c/">[기고]
+					비즈니스 애플리케이션과 하이브리드</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c%ec%a3%bc-2019-%eb%8c%80%ed%95%9c%eb%af%bc%ea%b5%ad-%ec%a4%91%ec%86%8c%c2%b7%ec%a4%91%ea%b2%ac%ea%b8%b0%ec%97%85-%ed%98%81%ec%8b%a0/">메가존클라우드(주),
+					2019 대한민국 중소·중견기업 혁신대상 수상</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ea%b4%91%ec%a3%bc%ec%a0%84%eb%82%a8-%eb%b2%a4%ec%b2%98%ea%b8%b0%ec%97%85%ec%9d%b8%ec%9d%98-%eb%b0%a4-%ec%84%b1%eb%a3%8c%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac/">‘광주전남
+					벤처기업인의 밤’ 성료…“네트워크 확대”</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ea%b3%bc%ea%b8%b0%ec%a0%95%ed%86%b5%eb%b6%80-%ec%a0%9c14%ed%9a%8c-%eb%8c%80%ed%95%9c%eb%af%bc%ea%b5%ad-%ec%9d%b8%ed%84%b0%eb%84%b7%eb%8c%80%ec%83%81-%ea%b0%9c%ec%b5%9c/">과기정통부,
+					‘제14회 대한민국 인터넷대상’ 개최</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/lg-cns%c2%b7%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%95%a9%ec%9e%91-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c%ea%b7%b8%eb%9e%a8-%eb%82%b4%eb%8b%ac-2%ec%9d%bc-%ec%b6%9c%eb%b2%94/">LG
+					CNS·메가존 합작 ‘클라우드그램’, 내달 2일 출범</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%9d%b4%ec%a3%bc%ec%99%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%eb%8c%80%ed%91%9c-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%a0%84%ed%99%98%ec%9c%a8-10-%ec%9c%84%ea%b8%b0%ec%9d%b4%ec%9e%90-%ea%b8%b0/">이주완
+					메가존 대표 “클라우드 전환율 10%, 위기이자 기회”</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%82%bc%ec%a0%95kpmg-%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%bb%a8%ec%84%a4%ed%8c%85-%ec%82%ac%ec%97%85-mou/">삼정KPMG-메가존클라우드,
+					클라우드 컨설팅 사업 MOU</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%98%ac-%eb%a7%a4%ec%b6%9c-4000%ec%96%b5%ec%9b%90-%eb%84%98%eb%b3%b8%eb%8b%a4/">메가존,
+					올 매출 4000억원 넘본다</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%b3%b4%ec%95%88-%ea%b5%ad%ec%a0%9c%ec%9d%b8%ec%a6%9d-3%ea%b0%9c-%eb%b6%80%eb%ac%b8-%eb%8f%99%ec%8b%9c-%ed%9a%8d%eb%93%9d/">메가존,
+					클라우드 보안 국제인증 3개 부문 동시 획득…국내외 클라우드 보안인증 완비</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%9e%8c%eb%8b%a4256%c2%b7%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%b8%94%eb%a1%9d%ec%b2%b4%ec%9d%b8-%ec%9c%a0%ed%86%b5%eb%a7%9d-%ed%99%95%eb%8c%80-%ed%8c%8c%ed%8a%b8/">람다256·메가존클라우드,
+					블록체인 유통망 확대 파트너십</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/lg-cns-%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%a0%84%ed%99%98-%ec%83%9d%ed%83%9c%ea%b3%84-%ec%84%a0%ec%a0%90-%ec%9c%84%ed%95%9c-%ed%95%a9%ec%9e%91%eb%b2%95%ec%9d%b8/">LG
+					CNS-메가존, 클라우드 전환 생태계 선점 위한 합작법인 설립</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-aws-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%a0%84%eb%ac%b8-%ec%9d%b8%eb%a0%a5-%ec%96%91%ec%84%b1%ea%b5%90%ec%9c%a1%ea%b8%b0/">메가존
+					클라우드, AWS 클라우드 전문 인력 양성…교육기관 설립</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ed%85%8c%ed%81%ac%eb%84%b7%ec%84%9c%eb%b0%8b2019-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%97%98%eb%9d%bc%ec%8a%a4%ed%8b%b1-%ec%8a%a4%ed%83%9d-%ec%bb%a8%ed%85%8c%ec%9d%b4/">[오픈테크넷서밋2019]
+					메가존, “엘라스틱 스택, 컨테이너 모니터링 최적 솔루선”</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%af%b8%eb%9e%98%ed%98%95-%ec%8a%a4%eb%a7%88%ed%8a%b8%ec%8b%9c%ed%8b%b0-%ea%b5%ac%ec%b6%95%ec%a0%95%eb%b6%80%ea%b0%80-%eb%b0%80%ea%b3%a0-%ea%b8%b0%ec%97%85%ec%9d%b4-%ec%9d%b4%eb%81%88/">미래형
+					스마트시티 구축…정부가 밀고 기업이 이끈다</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-ai%ed%99%9c%ec%9a%a9%ed%95%b4-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%b3%b4%ec%95%88-%ea%b0%95%ed%99%94/">메가존
+					클라우드, AI활용해 클라우드 보안 강화</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%a1%b4%c2%b7%ec%95%84%eb%a7%88%eb%85%b8%ec%bd%94%eb%a6%ac%ec%95%84%c2%b7%ed%8b%b0%ec%95%a4%ec%95%8c%eb%b0%94%ec%9d%b4%ec%98%a4%ed%8c%b9-%eb%a6%ac%eb%94%a9%ea%b8%b0/">메가존·아마노코리아·티앤알바이오팹,
+					‘리딩기업대상 3년연속상’ 수상</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/ai%c2%b7%eb%a1%9c%eb%b4%87-%ec%84%9c%eb%b0%8b-2019%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ed%81%90%eb%b8%8cai%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4/">[AI·로봇
+					서밋 2019]메가존클라우드 ‘큐브AI’…비즈니스 통찰력 제공</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b8%b0%eb%b0%98-erp%eb%a1%9c-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4%eb%a5%bc-%ec%84%b1%ea%b3%b5%ec%8b%9c%ed%82%a4%eb%a0%a4%eb%a9%b4/">클라우드
+					기반 ERP로 비즈니스를 성공시키려면?</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/ai%ec%97%94%ed%84%b0%ed%94%84%eb%9d%bc%ec%9d%b4%ec%a6%88-2019%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-aws-%ea%b8%b0%eb%b0%98-r-%ec%82%ac%ec%9a%a9%eb%b2%95-%ea%b3%b5%ec%9c%a0/">[AI엔터프라이즈
+					2019]메가존클라우드, AWS 기반 R 사용법 공유</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ea%b8%b0%ea%b3%a0-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%ec%95%a0%ed%94%8c%eb%a6%ac%ec%bc%80%ec%9d%b4%ec%85%98%ea%b3%bc-%ed%95%98%ec%9d%b4%eb%b8%8c%eb%a6%ac%eb%93%9c/">[기고]
+					비즈니스 애플리케이션과 하이브리드</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%82%bc%ec%a0%95kpmg-%eb%a9%94%ea%b0%80%ec%a1%b4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%bb%a8%ec%84%a4%ed%8c%85-%ec%82%ac%ec%97%85-mou/">삼정KPMG-메가존클라우드,
+					클라우드 컨설팅 사업 MOU</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ea%b8%b0%ea%b3%a0-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%ec%95%a0%ed%94%8c%eb%a6%ac%ec%bc%80%ec%9d%b4%ec%85%98%ea%b3%bc-%ed%95%98%ec%9d%b4%eb%b8%8c%eb%a6%ac%eb%93%9c/">[기고]
+					비즈니스 애플리케이션과 하이브리드</a>
+				<br>
+				<br>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="content">
+		<div style="text-align:center">
+			<img src="img/culture.jpg" height="250" width="99.2%">
+		</div>
+		<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>CULTURE</h3>
+				<br>
+				<a
+					href="https://www.mz.co.kr/give-it-try-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c/">[칼럼]
+					GIVE IT TRY!! 클라우드 네이티브</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-%eb%8b%a4%ed%81%903%ec%9d%bc-%ec%a6%90%ea%b1%b0%ec%9a%b4-%ec%9b%b9%ec%84%9c%eb%b9%84%ec%8a%a4%eb%b6%80%eb%ac%b8/">[오픈세미나]
+					다큐3일-즐거운 웹서비스부문</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c%eb%a5%bc-%ec%9c%84%ed%95%9c-%ed%95%b5%ec%8b%ac-%ea%b8%b0%ec%88%a0/">[칼럼]
+					클라우드 네이티브를 위한 핵심 기술</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-%eb%a1%af%eb%8d%b0%eb%a7%88%ed%8a%b8-alm-%eb%8f%84%ec%9e%85%ec%82%ac%eb%a1%80-%eb%b0%8f-%eb%b0%9c%ec%a0%84-%eb%b0%a9%ed%96%a5/">[오픈세미나]
+					롯데마트 ALM 도입사례 및 발전 방향</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%ec%99%9c-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c%ec%9d%b8%ea%b0%80/">[칼럼]
+					왜 클라우드 네이티브인가?</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%eb%94%94%ec%a7%80%ed%84%b8-%ed%8a%b8%eb%9e%9c%ec%8a%a4%ed%8f%ac%eb%a9%94%ec%9d%b4%ec%85%98%ec%9d%84-%ec%9c%84%ed%95%b4-%ea%b8%b0%ec%97%85%ec%9d%b4-%ea%b0%80%ec%a0%b8%ec%95%bc/">[칼럼]
+					디지털 트랜스포메이션을 위해 기업이 가져야 할 것들</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-devops%ec%9d%98-%ec%9d%b4%ed%95%b4/">[오픈세미나]
+					DEVOPS의 이해</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%eb%94%94%ec%a7%80%ed%84%b8-%ed%98%81%eb%aa%85%ea%b3%bc-%ea%b8%b0%ec%97%85%ec%9d%98-%eb%94%94%ec%a7%80%ed%84%b8-%ed%8a%b8%eb%9e%9c%ec%8a%a4%ed%8f%ac%eb%a9%94%ec%9d%b4%ec%85%98/">[칼럼]
+					디지털 혁명과 기업의 디지털 트랜스포메이션</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-dsg-%eb%aa%a9%ed%91%9c%ec%99%80-%ed%95%b5%ec%8b%ac%ea%b0%80%ec%b9%98-%ea%b3%b5%ec%9c%a0%ec%84%b8%eb%af%b8%eb%82%98/">[오픈세미나]
+					DSG 목표와 핵심가치 공유세미나</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%95%a0%ec%9e%90%ec%9d%bc-%eb%ac%b8%ed%99%94-%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4-%eb%8f%84%ec%9e%85-%ec%84%b8%eb%af%b8%eb%82%98-%ec%9a%b0%ec%95%84%ed%95%9c%ed%98%95%ec%a0%9c%eb%93%a4-%ec%8b%a0/">애자일
+					문화/프로세스 도입 세미나 (우아한형제들 신정호 셀장)</a>
+				<br>
+				<a href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%8d%ac%eb%8d%94%ec%8a%a4/">메가존 농구동아리 메가썬더스</a>
+				<br>
+				<a href="https://www.mz.co.kr/%ea%b0%90%ec%82%ac%ed%8c%a8-%ec%a0%84%eb%8b%ac%ec%8b%9d/">감사패 전달식</a>
+				<br>
+				<a href="https://www.mz.co.kr/2012%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2012년
+					MEGAVIRUS 메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2011-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2011년
+					메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2010%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2010년
+					메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2009%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2009년
+					메가존 송년파티</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%98-%eb%86%80%eb%9d%bc%ec%9a%b4-%ed%9e%98%ec%9d%84-%ec%97%bf%eb%b3%b4%eb%8b%a4-2_%eb%af%b8%eb%9e%98-%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%80-%ec%96%b4%eb%96%a8%ea%b9%8c/">디자인의
+					놀라운 힘을 엿보다 2</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%98-%eb%86%80%eb%9d%bc%ec%9a%b4-%ed%9e%98%ec%9d%84-%ec%97%bf%eb%b3%b4%eb%8b%a41_%ec%9c%a0%eb%aa%85-%eb%94%94%ec%9e%90%ec%9d%b4%eb%84%88%eb%93%a4%ec%9d%98-%eb%b0%a9/">디자인의
+					놀라운 힘을 엿보다1</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ed%94%84%eb%a6%ac%ec%a0%a0%ed%85%8c%ec%9d%b4%ec%85%98-%ec%9e%98%ed%95%98%eb%8a%94-%eb%b0%a9%eb%b2%95/">프리젠테이션,
+					잘하는 방법?!</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/give-it-try-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c/">[칼럼]
+					GIVE IT TRY!! 클라우드 네이티브</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-%eb%8b%a4%ed%81%903%ec%9d%bc-%ec%a6%90%ea%b1%b0%ec%9a%b4-%ec%9b%b9%ec%84%9c%eb%b9%84%ec%8a%a4%eb%b6%80%eb%ac%b8/">[오픈세미나]
+					다큐3일-즐거운 웹서비스부문</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c%eb%a5%bc-%ec%9c%84%ed%95%9c-%ed%95%b5%ec%8b%ac-%ea%b8%b0%ec%88%a0/">[칼럼]
+					클라우드 네이티브를 위한 핵심 기술</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-%eb%a1%af%eb%8d%b0%eb%a7%88%ed%8a%b8-alm-%eb%8f%84%ec%9e%85%ec%82%ac%eb%a1%80-%eb%b0%8f-%eb%b0%9c%ec%a0%84-%eb%b0%a9%ed%96%a5/">[오픈세미나]
+					롯데마트 ALM 도입사례 및 발전 방향</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%ec%99%9c-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c%ec%9d%b8%ea%b0%80/">[칼럼]
+					왜 클라우드 네이티브인가?</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%eb%94%94%ec%a7%80%ed%84%b8-%ed%8a%b8%eb%9e%9c%ec%8a%a4%ed%8f%ac%eb%a9%94%ec%9d%b4%ec%85%98%ec%9d%84-%ec%9c%84%ed%95%b4-%ea%b8%b0%ec%97%85%ec%9d%b4-%ea%b0%80%ec%a0%b8%ec%95%bc/">[칼럼]
+					디지털 트랜스포메이션을 위해 기업이 가져야 할 것들</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-devops%ec%9d%98-%ec%9d%b4%ed%95%b4/">[오픈세미나]
+					DEVOPS의 이해</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%eb%94%94%ec%a7%80%ed%84%b8-%ed%98%81%eb%aa%85%ea%b3%bc-%ea%b8%b0%ec%97%85%ec%9d%98-%eb%94%94%ec%a7%80%ed%84%b8-%ed%8a%b8%eb%9e%9c%ec%8a%a4%ed%8f%ac%eb%a9%94%ec%9d%b4%ec%85%98/">[칼럼]
+					디지털 혁명과 기업의 디지털 트랜스포메이션</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-dsg-%eb%aa%a9%ed%91%9c%ec%99%80-%ed%95%b5%ec%8b%ac%ea%b0%80%ec%b9%98-%ea%b3%b5%ec%9c%a0%ec%84%b8%eb%af%b8%eb%82%98/">[오픈세미나]
+					DSG 목표와 핵심가치 공유세미나</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%95%a0%ec%9e%90%ec%9d%bc-%eb%ac%b8%ed%99%94-%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4-%eb%8f%84%ec%9e%85-%ec%84%b8%eb%af%b8%eb%82%98-%ec%9a%b0%ec%95%84%ed%95%9c%ed%98%95%ec%a0%9c%eb%93%a4-%ec%8b%a0/">애자일
+					문화/프로세스 도입 세미나 (우아한형제들 신정호 셀장)</a>
+				<br>
+				<a href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%8d%ac%eb%8d%94%ec%8a%a4/">메가존 농구동아리 메가썬더스</a>
+				<br>
+				<a href="https://www.mz.co.kr/%ea%b0%90%ec%82%ac%ed%8c%a8-%ec%a0%84%eb%8b%ac%ec%8b%9d/">감사패 전달식</a>
+				<br>
+				<a href="https://www.mz.co.kr/2012%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2012년
+					MEGAVIRUS 메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2011-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2011년
+					메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2010%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2010년
+					메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2009%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2009년
+					메가존 송년파티</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%98-%eb%86%80%eb%9d%bc%ec%9a%b4-%ed%9e%98%ec%9d%84-%ec%97%bf%eb%b3%b4%eb%8b%a4-2_%eb%af%b8%eb%9e%98-%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%80-%ec%96%b4%eb%96%a8%ea%b9%8c/">디자인의
+					놀라운 힘을 엿보다 2</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%98-%eb%86%80%eb%9d%bc%ec%9a%b4-%ed%9e%98%ec%9d%84-%ec%97%bf%eb%b3%b4%eb%8b%a41_%ec%9c%a0%eb%aa%85-%eb%94%94%ec%9e%90%ec%9d%b4%eb%84%88%eb%93%a4%ec%9d%98-%eb%b0%a9/">디자인의
+					놀라운 힘을 엿보다1</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ed%94%84%eb%a6%ac%ec%a0%a0%ed%85%8c%ec%9d%b4%ec%85%98-%ec%9e%98%ed%95%98%eb%8a%94-%eb%b0%a9%eb%b2%95/">프리젠테이션,
+					잘하는 방법?!</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/give-it-try-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c/">[칼럼]
+					GIVE IT TRY!! 클라우드 네이티브</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-%eb%8b%a4%ed%81%903%ec%9d%bc-%ec%a6%90%ea%b1%b0%ec%9a%b4-%ec%9b%b9%ec%84%9c%eb%b9%84%ec%8a%a4%eb%b6%80%eb%ac%b8/">[오픈세미나]
+					다큐3일-즐거운 웹서비스부문</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c%eb%a5%bc-%ec%9c%84%ed%95%9c-%ed%95%b5%ec%8b%ac-%ea%b8%b0%ec%88%a0/">[칼럼]
+					클라우드 네이티브를 위한 핵심 기술</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-%eb%a1%af%eb%8d%b0%eb%a7%88%ed%8a%b8-alm-%eb%8f%84%ec%9e%85%ec%82%ac%eb%a1%80-%eb%b0%8f-%eb%b0%9c%ec%a0%84-%eb%b0%a9%ed%96%a5/">[오픈세미나]
+					롯데마트 ALM 도입사례 및 발전 방향</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%ec%99%9c-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c%ec%9d%b8%ea%b0%80/">[칼럼]
+					왜 클라우드 네이티브인가?</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%eb%94%94%ec%a7%80%ed%84%b8-%ed%8a%b8%eb%9e%9c%ec%8a%a4%ed%8f%ac%eb%a9%94%ec%9d%b4%ec%85%98%ec%9d%84-%ec%9c%84%ed%95%b4-%ea%b8%b0%ec%97%85%ec%9d%b4-%ea%b0%80%ec%a0%b8%ec%95%bc/">[칼럼]
+					디지털 트랜스포메이션을 위해 기업이 가져야 할 것들</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-devops%ec%9d%98-%ec%9d%b4%ed%95%b4/">[오픈세미나]
+					DEVOPS의 이해</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%b9%bc%eb%9f%bc-%eb%94%94%ec%a7%80%ed%84%b8-%ed%98%81%eb%aa%85%ea%b3%bc-%ea%b8%b0%ec%97%85%ec%9d%98-%eb%94%94%ec%a7%80%ed%84%b8-%ed%8a%b8%eb%9e%9c%ec%8a%a4%ed%8f%ac%eb%a9%94%ec%9d%b4%ec%85%98/">[칼럼]
+					디지털 혁명과 기업의 디지털 트랜스포메이션</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%98%a4%ed%94%88%ec%84%b8%eb%af%b8%eb%82%98-dsg-%eb%aa%a9%ed%91%9c%ec%99%80-%ed%95%b5%ec%8b%ac%ea%b0%80%ec%b9%98-%ea%b3%b5%ec%9c%a0%ec%84%b8%eb%af%b8%eb%82%98/">[오픈세미나]
+					DSG 목표와 핵심가치 공유세미나</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ec%95%a0%ec%9e%90%ec%9d%bc-%eb%ac%b8%ed%99%94-%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4-%eb%8f%84%ec%9e%85-%ec%84%b8%eb%af%b8%eb%82%98-%ec%9a%b0%ec%95%84%ed%95%9c%ed%98%95%ec%a0%9c%eb%93%a4-%ec%8b%a0/">애자일
+					문화/프로세스 도입 세미나 (우아한형제들 신정호 셀장)</a>
+				<br>
+				<a href="https://www.mz.co.kr/%eb%a9%94%ea%b0%80%ec%8d%ac%eb%8d%94%ec%8a%a4/">메가존 농구동아리 메가썬더스</a>
+				<br>
+				<a href="https://www.mz.co.kr/%ea%b0%90%ec%82%ac%ed%8c%a8-%ec%a0%84%eb%8b%ac%ec%8b%9d/">감사패 전달식</a>
+				<br>
+				<a href="https://www.mz.co.kr/2012%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2012년
+					MEGAVIRUS 메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2011-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2011년
+					메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2010%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2010년
+					메가존 송년파티</a>
+				<br>
+				<a href="https://www.mz.co.kr/2009%eb%85%84-%eb%a9%94%ea%b0%80%ec%a1%b4-%ec%86%a1%eb%85%84%ed%8c%8c%ed%8b%b0/">2009년
+					메가존 송년파티</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%98-%eb%86%80%eb%9d%bc%ec%9a%b4-%ed%9e%98%ec%9d%84-%ec%97%bf%eb%b3%b4%eb%8b%a4-2_%eb%af%b8%eb%9e%98-%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%80-%ec%96%b4%eb%96%a8%ea%b9%8c/">디자인의
+					놀라운 힘을 엿보다 2</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%98-%eb%86%80%eb%9d%bc%ec%9a%b4-%ed%9e%98%ec%9d%84-%ec%97%bf%eb%b3%b4%eb%8b%a41_%ec%9c%a0%eb%aa%85-%eb%94%94%ec%9e%90%ec%9d%b4%eb%84%88%eb%93%a4%ec%9d%98-%eb%b0%a9/">디자인의
+					놀라운 힘을 엿보다1</a>
+				<br>
+				<a
+					href="https://www.mz.co.kr/%ed%94%84%eb%a6%ac%ec%a0%a0%ed%85%8c%ec%9d%b4%ec%85%98-%ec%9e%98%ed%95%98%eb%8a%94-%eb%b0%a9%eb%b2%95/">프리젠테이션,
+					잘하는 방법?!</a>
+				<br>
+				<br>
+
+
+
+				</section>
+			</div>
+		</div>
+	</div>
+
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<h1>MEGAZONE</h1>
+	</div>
+</div>
+
+
+</div>
+
+</body>
+
+
+</html>
